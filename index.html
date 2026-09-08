@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A privacy-first open-source kit for reusable event interfaces, synthetic data contracts, and community promotion playbooks.">
+    <title>Event Open Kit | surfaced-lab</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="./" aria-label="Event Open Kit home">
+        <span class="wordmark-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>event open kit</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#specimen">Specimen</a>
+        <a href="#boundary">Boundary</a>
+        <a href="#playbooks">Playbooks</a>
+        <a class="nav-link-strong" href="https://github.com/surfaced-lab/event-open-kit">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero section-shell">
+        <div class="hero-copy">
+          <p class="eyebrow">surfaced-lab / public release 0.1</p>
+          <h1>Open the interface. Keep the intelligence private.</h1>
+          <p class="hero-summary">Reusable event UI, synthetic data, and promotion playbooks for teams that need a credible first release.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#specimen">View the specimen <span aria-hidden="true">-&gt;</span></a>
+            <a class="button button-secondary" href="#boundary">Read the boundary</a>
+          </div>
+          <div class="hero-note"><span class="status-dot" aria-hidden="true"></span><span>Dependency-free demo. No email, registration, API, or telemetry.</span></div>
+        </div>
+
+        <div class="hero-art" aria-label="Synthetic event card specimen">
+          <div class="art-topline"><span>EVENT SURFACE / SYNTHETIC</span><span>01—03</span></div>
+          <div class="art-gridline"></div>
+          <div class="event-specimen">
+            <div class="specimen-header">
+              <span class="specimen-kicker">SAMPLE PROGRAM</span>
+              <span class="specimen-status">Published example</span>
+            </div>
+            <p class="specimen-date">14 MAY 2027 / 18:30</p>
+            <h2>Neighbourhood<br>Commons Night</h2>
+            <p class="specimen-location">Sample Civic Hall · Sample City</p>
+            <div class="specimen-footer"><span>Free example</span><span class="round-arrow" aria-hidden="true">-&gt;</span></div>
+          </div>
+          <div class="art-caption"><span>Record type</span><strong>synthetic</strong><span>Public facts only</span></div>
+        </div>
+      </section>
+
+      <section class="activity-strip section-shell" aria-label="Release activity summary">
+        <div class="activity-intro">
+          <p class="eyebrow">PUBLIC MOTION</p>
+          <h2>Show the work without showing the private system.</h2>
+        </div>
+        <div class="activity-list">
+          <div class="activity-item"><span class="activity-label">Latest release</span><strong>0.1.0 / public</strong><span>README + demo + contract</span></div>
+          <div class="activity-item"><span class="activity-label">Release gate</span><strong>npm test / pass</strong><span>allowlist + key scan</span></div>
+          <div class="activity-item"><span class="activity-label">Data status</span><strong>synthetic only</strong><span>no attendee records</span></div>
+        </div>
+      </section>
+
+      <section id="specimen" class="content-section section-shell">
+        <div class="section-heading">
+          <div><p class="eyebrow">01 / SPECIMEN</p><h2>A small surface with a clear job.</h2></div>
+          <p>Use the kit to prototype the public layer of an event product before connecting private operations.</p>
+        </div>
+        <div class="specimen-grid">
+          <article class="feature-panel feature-panel-dark">
+            <div class="panel-meta"><span>01</span><span>INTERFACE</span></div>
+            <h3>Answer first.</h3>
+            <p>Lead with the event, date, place, access, and one next step. Keep proof and claims close to their source.</p>
+            <div class="mini-interface">
+              <div class="mini-row"><span class="mini-icon" aria-hidden="true">+</span><span>What is happening?</span><span class="mini-check">ready</span></div>
+              <div class="mini-row"><span class="mini-icon" aria-hidden="true">+</span><span>Who is it for?</span><span class="mini-check">ready</span></div>
+              <div class="mini-row"><span class="mini-icon" aria-hidden="true">+</span><span>What can be verified?</span><span class="mini-check">ready</span></div>
+            </div>
+          </article>
+          <article class="feature-panel feature-panel-paper">
+            <div class="panel-meta"><span>02</span><span>DATA CONTRACT</span></div>
+            <h3>Make provenance visible.</h3>
+            <p>Every record carries a status, source note, and explicit synthetic marker. The structure is reusable; the facts remain yours.</p>
+            <button class="code-button" id="copySchema" type="button">Copy sample record <span aria-hidden="true">&lt;/&gt;</span></button>
+            <pre class="code-sample" aria-label="Sample synthetic event record"><code>{
+  "id": "evt_synthetic_commons_night",
+  "status": "published",
+  "recordType": "synthetic"
+}</code></pre>
+            <p class="copy-status" id="copyStatus" role="status" aria-live="polite"></p>
+          </article>
+          <article class="feature-panel feature-panel-blue">
+            <div class="panel-meta"><span>03</span><span>PLAYBOOKS</span></div>
+            <h3>Teach the repeatable move.</h3>
+            <p>Share the proposal skeleton and measurement language. Keep negotiated terms, private contacts, and ranking logic out of the public repo.</p>
+            <a class="text-link" href="#playbooks">Open the templates <span aria-hidden="true">-&gt;</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section id="boundary" class="boundary-section">
+        <div class="section-shell boundary-layout">
+          <div class="boundary-intro"><p class="eyebrow">02 / BOUNDARY</p><h2>Open the reusable layer. Hold the evidence layer.</h2><p>The public repository should be useful even when nobody can see your production database.</p></div>
+          <div class="boundary-table" role="table" aria-label="Public and private content boundary">
+            <div class="boundary-row boundary-head" role="row"><span role="columnheader">Public release</span><span role="columnheader">Private system</span></div>
+            <div class="boundary-row" role="row"><span role="cell"><b>UI patterns</b><small>components, tokens, accessibility</small></span><span role="cell"><b>Real records</b><small>attendance, registration, check-in</small></span></div>
+            <div class="boundary-row" role="row"><span role="cell"><b>Synthetic data</b><small>schema, fixtures, import examples</small></span><span role="cell"><b>Private identity</b><small>contacts, mailbox, customer material</small></span></div>
+            <div class="boundary-row" role="row"><span role="cell"><b>Best practices</b><small>templates, checklists, measurement terms</small></span><span role="cell"><b>Secret sauce</b><small>ranking, research, operating logic</small></span></div>
+            <div class="boundary-row" role="row"><span role="cell"><b>Release proof</b><small>tests, screenshots, changelog</small></span><span role="cell"><b>Credentials</b><small>keys, payments, infrastructure</small></span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="playbooks" class="content-section section-shell">
+        <div class="section-heading"><div><p class="eyebrow">03 / PLAYBOOKS</p><h2>Give contributors a useful first move.</h2></div><p>Good open source lowers the time from clone to first contribution. These templates keep claims bounded and actions clear.</p></div>
+        <div class="playbook-layout">
+          <div class="playbook-list" id="playbookList">
+            <button class="playbook-tab is-active" type="button" data-playbook="brief"><span>01</span><span><b>Event marketing brief</b><small>facts, message ladder, stop conditions</small></span><span aria-hidden="true">-&gt;</span></button>
+            <button class="playbook-tab" type="button" data-playbook="sponsor"><span>02</span><span><b>Sponsor proposal skeleton</b><small>public fit, deliverables, guardrails</small></span><span aria-hidden="true">-&gt;</span></button>
+            <button class="playbook-tab" type="button" data-playbook="contribution"><span>03</span><span><b>Contribution path</b><small>issue, small PR, verified result</small></span><span aria-hidden="true">-&gt;</span></button>
+          </div>
+          <div class="playbook-preview" id="playbookPreview" aria-live="polite">
+            <p class="preview-label">EVENT MARKETING BRIEF</p>
+            <h3>One public answer before the campaign.</h3>
+            <p>Write the public sentence, attach the source, name the next step, and define what would make the claim too stale to repeat.</p>
+            <div class="preview-fields"><span>canonical URL</span><span>verified date</span><span>stop condition</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="release-section">
+        <div class="section-shell release-layout">
+          <div><p class="eyebrow">RELEASE PATH</p><h2>Small, inspectable, forkable.</h2></div>
+          <div class="release-steps"><div><span>01</span><b>Read</b><small>README and boundary</small></div><div><span>02</span><b>Run</b><small>npm test and local demo</small></div><div><span>03</span><b>Improve</b><small>one focused pull request</small></div></div>
+          <a class="button button-primary" href="https://github.com/surfaced-lab/event-open-kit">View on GitHub <span aria-hidden="true">-&gt;</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell"><span>event open kit / surfaced-lab</span><span>Public patterns, private evidence.</span><a href="#main">Back to top</a></footer>
+    <script src="app.js" defer></script>
+  </body>
+</html>
+

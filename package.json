@@ -1,0 +1,20 @@
+{
+  "name": "event-open-kit",
+  "version": "0.1.0",
+  "private": false,
+  "description": "A privacy-first starter kit for reusable event interfaces, synthetic data contracts, and community promotion playbooks.",
+  "type": "module",
+  "scripts": {
+    "test": "node scripts/validate.mjs",
+    "serve": "python3 -m http.server 4173"
+  },
+  "license": "MIT",
+  "keywords": [
+    "events",
+    "community",
+    "synthetic-data",
+    "ui-kit",
+    "open-source"
+  ]
+}
+

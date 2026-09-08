@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://surfaced-lab.github.io/event-open-kit/schema.json",
+  "title": "Synthetic Community Event",
+  "description": "A privacy-safe, illustrative event record. It must not contain real personal or operational data.",
+  "type": "object",
+  "required": ["id", "title", "status", "date", "location", "organizer", "access", "provenance"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^evt_synthetic_[a-z0-9_-]+$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 3
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "published", "closed"]
+    },
+    "date": {
+      "type": "object",
+      "required": ["start", "timezone"],
+      "properties": {
+        "start": { "type": "string", "format": "date-time" },
+        "end": { "type": "string", "format": "date-time" },
+        "timezone": { "type": "string", "minLength": 3 }
+      },
+      "additionalProperties": false
+    },
+    "location": {
+      "type": "object",
+      "required": ["label", "city", "countryCode"],
+      "properties": {
+        "label": { "type": "string" },
+        "city": { "type": "string" },
+        "countryCode": { "type": "string", "pattern": "^[A-Z]{2}$" },
+        "publicAddress": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "organizer": {
+      "type": "object",
+      "required": ["displayName", "recordType"],
+      "properties": {
+        "displayName": { "type": "string" },
+        "recordType": { "const": "synthetic" }
+      },
+      "additionalProperties": false
+    },
+    "access": {
+      "type": "object",
+      "required": ["mode", "priceLabel"],
+      "properties": {
+        "mode": { "enum": ["free", "ticketed", "invite"] },
+        "priceLabel": { "type": "string" },
+        "registrationUrl": { "type": "string", "format": "uri-reference" }
+      },
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["recordType", "sourceNote"],
+      "properties": {
+        "recordType": { "const": "synthetic" },
+        "sourceNote": { "type": "string", "minLength": 12 }
+      },
+      "additionalProperties": false
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "maxItems": 8
+    }
+  },
+  "additionalProperties": false
+}
+

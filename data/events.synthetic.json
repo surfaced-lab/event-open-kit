@@ -1,0 +1,66 @@
+{
+  "recordType": "synthetic collection",
+  "notice": "All records below are fictional examples for interface testing. They do not describe real people, events, venues, sponsors, attendance, or transactions.",
+  "events": [
+    {
+      "id": "evt_synthetic_commons_night",
+      "title": "Neighbourhood Commons Night",
+      "status": "published",
+      "date": {
+        "start": "2027-05-14T18:30:00-04:00",
+        "end": "2027-05-14T21:00:00-04:00",
+        "timezone": "America/Toronto"
+      },
+      "location": {
+        "label": "Sample Civic Hall",
+        "city": "Sample City",
+        "countryCode": "CA",
+        "publicAddress": "Address withheld in synthetic data"
+      },
+      "organizer": {
+        "displayName": "Sample Community Collective",
+        "recordType": "synthetic"
+      },
+      "access": {
+        "mode": "free",
+        "priceLabel": "Free example",
+        "registrationUrl": "/register/example"
+      },
+      "provenance": {
+        "recordType": "synthetic",
+        "sourceNote": "Generated for the Event Open Kit demo and validation gate."
+      },
+      "tags": ["community", "workshop", "accessible"]
+    },
+    {
+      "id": "evt_synthetic_river_lab",
+      "title": "Riverbank Repair Lab",
+      "status": "draft",
+      "date": {
+        "start": "2027-06-06T10:00:00-04:00",
+        "timezone": "America/Toronto"
+      },
+      "location": {
+        "label": "Example Greenway",
+        "city": "Sample City",
+        "countryCode": "CA",
+        "publicAddress": "Address withheld in synthetic data"
+      },
+      "organizer": {
+        "displayName": "Example Stewardship Group",
+        "recordType": "synthetic"
+      },
+      "access": {
+        "mode": "invite",
+        "priceLabel": "Example registration",
+        "registrationUrl": "/register/example"
+      },
+      "provenance": {
+        "recordType": "synthetic",
+        "sourceNote": "Generated for the Event Open Kit demo and validation gate."
+      },
+      "tags": ["stewardship", "outdoors", "volunteer"]
+    }
+  ]
+}
+
