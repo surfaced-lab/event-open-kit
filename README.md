@@ -1,6 +1,8 @@
 # Event Open Kit
 
-Event Open Kit is a small, privacy-first starter kit for building credible community-event interfaces without publishing private operational data.
+Build an event sponsor thank-you kit in your browser: edit the event, supporter, and contribution, then download a printable HTML card and Markdown brief. No account, API key, or installation of dependencies required.
+
+Maintained by surfaced-lab, the team behind HonorMaker. The editable digital templates are independent of HonorMaker's commercial product.
 
 It contains three deliberately public layers:
 
@@ -13,9 +15,22 @@ The demo is static, dependency-free, and runnable from a local web server. It do
 ## Run locally
 
 ```bash
+git clone https://github.com/surfaced-lab/event-open-kit.git
+cd event-open-kit
 npm test
+node --test scripts/recognition.test.mjs
 npm run serve
 ```
+
+Requires Node.js 20+ and Python 3 for the local server. Open the **Build a thank-you kit** section, edit the fictional defaults, and download both files. To save a PDF, open the downloaded HTML and use your browser's print dialog.
+
+Inputs are held only in page memory and included in your downloads. Review exported content before sharing; do not commit real supporter or customer records. This tool does not contact HonorMaker or send form data anywhere.
+
+## Help shape the kit
+
+If this saves you time, consider starring the repository. Useful first contributions: a bilingual recognition template, a print-layout improvement, or a keyboard-accessibility fix. Include a fictional example and explain which organizer task it improves.
+
+See [the research and adoption plan](docs/open-source-patterns.md) for the source projects, selection limits, and next experiments. Stars measure interest; they do not establish organizer adoption.
 
 Open `http://localhost:4173` after starting the server. The validation command checks the public file allowlist, JSON validity, required privacy markers, and common credential patterns.
 

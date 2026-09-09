@@ -167,4 +167,17 @@ h1 { max-width: 620px; margin-bottom: 24px; font-size: clamp(3.1rem, 6vw, 5.7rem
   html { scroll-behavior: auto; }
   .button { transition: none; }
 }
-
+:root { scroll-behavior: auto; }
+.recognition-builder { padding-block: 64px; }
+.recognition-builder > h2 { font-size: clamp(28px, 4vw, 48px); max-width: 800px; }
+.recognition-builder > p { max-width: 760px; margin: 20px 0; }
+.recognition-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 40px; margin-block: 32px; }
+#recognitionForm { display: grid; gap: 12px; align-content: start; min-width: 0; }
+#recognitionForm input, #recognitionForm textarea { box-sizing: border-box; width: 100%; padding: 12px; font: inherit; border: 1px solid #77818b; background: #fafaf8; color: #19222b; border-radius: 4px; }
+#recognitionForm textarea { min-height: 110px; resize: vertical; }
+#recognitionForm button { min-height: 48px; }
+#recognitionForm button:disabled { opacity: .5; cursor: not-allowed; }
+.recognition-card { background: #fafaf8; border-top: 8px solid #2459a6; padding: clamp(20px, 4vw, 48px); align-self: start; overflow-wrap: anywhere; }
+.recognition-card h3 { font-size: clamp(28px, 4vw, 48px); line-height: 1.15; margin-block: 32px; }
+.recognition-card p { margin-block: 20px; }
+@media(max-width: 700px) { .recognition-layout { grid-template-columns: minmax(0, 1fr); gap: 24px; } }

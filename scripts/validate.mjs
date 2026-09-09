@@ -1,6 +1,6 @@
 import { readFile } from 'node:fs/promises';
 import { access } from 'node:fs/promises';
-import { join } from 'node:path';
+import { readdir } from 'node:fs/promises';
 
 const root = new URL('..', import.meta.url);
 const requiredFiles = [
@@ -13,6 +13,11 @@ const requiredFiles = [
   'index.html',
   'styles.css',
   'app.js',
+  'recognition.js',
+  'scripts/recognition.test.mjs',
+  'scripts/validate.mjs',
+  '.gitignore',
+  'docs/open-source-patterns.md',
   'package.json',
   'data/schema.json',
   'data/events.synthetic.json',
@@ -49,6 +54,15 @@ for (const event of collection.events ?? []) {
   if (event.provenance?.recordType !== 'synthetic') failures.push(`provenance is not marked synthetic: ${event.id}`);
 }
 
+async function walk(directory = '') {
+  for (const entry of await readdir(new URL(directory || '.', root), {withFileTypes: true})) {
+    if (entry.name === '.git') continue;
+    const path = directory + entry.name;
+    if (entry.isDirectory()) await walk(path + '/');
+    else if (!requiredFiles.includes(path)) failures.push(`file outside public allowlist: ${path}`);
+  }
+}
+await walk();
 for (const file of requiredFiles) {
   if (suspiciousPath.test(file)) failures.push(`suspicious tracked path: ${file}`);
   const contents = await readFile(new URL(file, root), 'utf8');

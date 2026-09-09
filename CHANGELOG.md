@@ -2,6 +2,12 @@
 
 All notable changes to this public learning kit are documented here.
 
+## Unreleased
+
+- Added a browser-only sponsor recognition builder with printable HTML and Markdown exports.
+- Added input-validation and HTML-escaping tests and a strict public file allowlist.
+- Added a source-linked open-source research and adoption plan.
+
 ## [0.1.0] - 2026-09-08
 
 ### Added

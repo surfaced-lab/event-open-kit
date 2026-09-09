@@ -26,10 +26,10 @@
       <section class="hero section-shell">
         <div class="hero-copy">
           <p class="eyebrow">surfaced-lab / public release 0.1</p>
-          <h1>Open the interface. Keep the intelligence private.</h1>
-          <p class="hero-summary">Reusable event UI, synthetic data, and promotion playbooks for teams that need a credible first release.</p>
+          <h1>Make your event thank-you worth keeping.</h1>
+          <p class="hero-summary">Create a sponsor recognition card and event brief. Edit locally, download, and make it yours.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#specimen">View the specimen <span aria-hidden="true">-&gt;</span></a>
+            <a class="button button-primary" href="#builder">Build a thank-you kit <span aria-hidden="true">-&gt;</span></a>
             <a class="button button-secondary" href="#boundary">Read the boundary</a>
           </div>
           <div class="hero-note"><span class="status-dot" aria-hidden="true"></span><span>Dependency-free demo. No email, registration, API, or telemetry.</span></div>
@@ -50,6 +50,28 @@
           </div>
           <div class="art-caption"><span>Record type</span><strong>synthetic</strong><span>Public facts only</span></div>
         </div>
+      </section>
+
+      <section class="section-shell recognition-builder" id="builder" aria-labelledby="builderTitle">
+        <h2 id="builderTitle">A little recognition. Ready to share.</h2>
+        <p>Start with fictional examples below. Your edits stay in this page until you download them. Reloading clears edits.</p>
+        <div class="recognition-layout">
+          <form id="recognitionForm" autocomplete="off">
+            <label for="eventName">Event name</label><input id="eventName" name="event" maxlength="100" required value="Neighbourhood Commons Night">
+            <label for="sponsorName">Supporter name</label><input id="sponsorName" name="sponsor" maxlength="100" required value="Sample Community Collective">
+            <label for="contribution">What are you thanking them for?</label><textarea id="contribution" name="contribution" maxlength="240" required>workshop materials and volunteer time</textarea>
+            <p id="recognitionStatus" role="status"></p>
+            <button class="button button-primary" type="button" data-export="html">Download printable card</button>
+            <button class="button button-secondary" type="button" data-export="markdown">Download event brief</button>
+            <small>Open the downloaded HTML in your browser and use Print / Save as PDF. Review names and permissions before sharing.</small>
+          </form>
+          <article class="recognition-card" aria-label="Recognition preview">
+            <p id="recognitionEvent"></p><h3>Thank you,<br><span id="recognitionSponsor"></span>.</h3><p id="recognitionMessage"></p>
+            <small>Recognition prepared by the event team.</small>
+          </article>
+        </div>
+        <p>Built by surfaced-lab, the team behind HonorMaker. This standalone tool creates editable digital recognition materials.</p>
+        <noscript>This builder needs JavaScript. The templates below remain available without it.</noscript>
       </section>
 
       <section class="activity-strip section-shell" aria-label="Release activity summary">
@@ -142,6 +164,6 @@
 
     <footer class="site-footer section-shell"><span>event open kit / surfaced-lab</span><span>Public patterns, private evidence.</span><a href="#main">Back to top</a></footer>
     <script src="app.js" defer></script>
+    <script type="module" src="recognition.js"></script>
   </body>
 </html>
-
