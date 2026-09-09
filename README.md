@@ -1,5 +1,24 @@
 # Event Open Kit
 
+## Event recognition studio powered by GrapesJS
+
+The visual editor is a vertical integration of [GrapesJS core](https://github.com/GrapesJS/grapesjs), not a new editing engine. Open `studio.html` after building. It reuses upstream canvas editing, styling, drag-and-drop, undo/redo and serialization. Our layer supplies fictional sponsor thank-you and volunteer-certificate presets plus HTML and editable-project downloads.
+
+```bash
+npm ci --ignore-scripts
+npm run build
+npm test
+npm run serve
+```
+
+Visit http://localhost:4173/studio.html. Double-click canvas text to edit. Download HTML for browser printing or the project JSON for use with GrapesJS `loadProjectData`. In-app project import is not implemented. A desktop browser is recommended for the upstream editor.
+
+GrapesJS 0.23.6 is pinned and BSD-3-Clause licensed; see [notices](THIRD-PARTY-NOTICES.md). We use its open-source core, not the separate commercial Studio SDK. Telemetry and storage are disabled, network connections blocked by the studio CSP, and assets bundled locally. Dependencies are fetched only during installation. No private HonorMaker system or data is connected.
+
+Alternatives evaluated: [pdfme](https://github.com/pdfme/pdfme) (MIT, stronger for fixed PDF forms and certificates) and [Penpot](https://github.com/penpot/penpot) (MPL-2.0, a full design/collaboration application). GrapesJS fits editable event HTML with a smaller integration. This is a technical fit assessment; preserve license notices when distributing builds.
+
+The original lightweight builder below remains dependency-free; the visual studio requires the build above. The dependency audit on 2026-09-09 reported zero known vulnerabilities; installation warned that upstream backbone-undo is deprecated. Track that dependency during upgrades.
+
 Build an event sponsor thank-you kit in your browser: edit the event, supporter, and contribution, then download a printable HTML card and Markdown brief. No account, API key, or installation of dependencies required.
 
 Maintained by surfaced-lab, the team behind HonorMaker. The editable digital templates are independent of HonorMaker's commercial product.

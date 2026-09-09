@@ -5,6 +5,7 @@
   "description": "A privacy-first starter kit for reusable event interfaces, synthetic data contracts, and community promotion playbooks.",
   "type": "module",
   "scripts": {
+    "build": "esbuild studio.js --bundle --minify --outdir=dist --legal-comments=eof",
     "test": "node scripts/validate.mjs",
     "serve": "python3 -m http.server 4173"
   },
@@ -15,6 +16,11 @@
     "synthetic-data",
     "ui-kit",
     "open-source"
-  ]
+  ],
+  "dependencies": {
+    "grapesjs": "0.23.6"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
 }
-

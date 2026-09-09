@@ -5,6 +5,10 @@ import { readdir } from 'node:fs/promises';
 const root = new URL('..', import.meta.url);
 const requiredFiles = [
   'README.md',
+  'studio.html',
+  'studio.js',
+  'package-lock.json',
+  'THIRD-PARTY-NOTICES.md',
   'CHANGELOG.md',
   'LICENSE',
   'CONTENT-LICENSE.md',
@@ -56,7 +60,7 @@ for (const event of collection.events ?? []) {
 
 async function walk(directory = '') {
   for (const entry of await readdir(new URL(directory || '.', root), {withFileTypes: true})) {
-    if (entry.name === '.git') continue;
+    if (entry.name === '.git' || (!directory && ['node_modules', 'dist'].includes(entry.name))) continue;
     const path = directory + entry.name;
     if (entry.isDirectory()) await walk(path + '/');
     else if (!requiredFiles.includes(path)) failures.push(`file outside public allowlist: ${path}`);
